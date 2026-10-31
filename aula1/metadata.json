@@ -1,0 +1,6 @@
+{
+  "name": "Calculadora Python Pink Edition",
+  "description": "Calculadora moderna em tons de rosa com quatro operações básicas, estúdio de código Python interativo e explicações passo a passo para iniciantes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
