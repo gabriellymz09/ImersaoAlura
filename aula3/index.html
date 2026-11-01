@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Tarefas 🌸</title>
+    
+    <!-- Fonte moderna do Google Fonts (Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Phosphor Icons para botões modernos -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+    
+    <!-- Arquivo de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-container">
+        <!-- Cabeçalho com título e subtítulo -->
+        <header class="header">
+            <div class="icon-badge">
+                <i class="ph ph-sparkle"></i>
+            </div>
+            <h1>Minhas Tarefas</h1>
+            <p id="current-date" class="subtitle">Organize seu dia com estilo</p>
+        </header>
+
+        <!-- Formulário para adicionar nova tarefa -->
+        <form id="todo-form" class="todo-form">
+            <div class="input-wrapper">
+                <i class="ph ph-plus-circle input-icon"></i>
+                <input 
+                    type="text" 
+                    id="todo-input" 
+                    placeholder="O que você precisa fazer hoje?" 
+                    autocomplete="off"
+                    required
+                >
+            </div>
+            <button type="submit" id="add-btn" class="btn-primary">
+                <span>Adicionar</span>
+                <i class="ph ph-arrow-right"></i>
+            </button>
+        </form>
+
+        <!-- Filtros e contador de tarefas -->
+        <section class="controls-section">
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">Todas</button>
+                <button class="filter-btn" data-filter="pending">Pendentes</button>
+                <button class="filter-btn" data-filter="completed">Concluídas</button>
+            </div>
+            <div class="tasks-counter" id="tasks-counter">
+                0 tarefas
+            </div>
+        </section>
+
+        <!-- Lista onde as tarefas serão inseridas via JavaScript -->
+        <ul id="todo-list" class="todo-list" aria-label="Lista de atividades">
+            <!-- As tarefas dinâmicas aparecerão aqui -->
+        </ul>
+
+        <!-- Estado vazio: exibido quando não há tarefas -->
+        <div id="empty-state" class="empty-state">
+            <div class="empty-illustration">🌸</div>
+            <p class="empty-title">Tudo limpo por aqui!</p>
+            <p class="empty-desc">Adicione uma nova tarefa acima para começar seu dia.</p>
+        </div>
+
+        <!-- Rodapé do cartão com botão para limpar tarefas concluídas -->
+        <footer class="footer-actions">
+            <button id="clear-completed-btn" class="btn-text">
+                <i class="ph ph-trash"></i>
+                Limpar concluídas
+            </button>
+        </footer>
+    </main>
+
+    <!-- Arquivo com a lógica interativa da aplicação -->
+    <script src="script.js"></script>
+</body>
+</html>
